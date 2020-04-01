@@ -1,3 +1,28 @@
+```{r, include = FALSE}
+knitr::knit_hooks$set(
+   error = function(x, options) {
+     paste('\n\n<div class="alert alert-danger">',
+           gsub('##', '\n', gsub('^##\ Error', '**Error**', x)),
+           '</div>', sep = '\n')
+   },
+   warning = function(x, options) {
+     paste('\n\n<div class="alert alert-warning">',
+           gsub('##', '\n', gsub('^##\ Warning:', '**Warning**', x)),
+           '</div>', sep = '\n')
+   },
+   message = function(x, options) {
+     paste('\n\n<div class="alert alert-info">',
+           gsub('##', '\n', x),
+           '</div>', sep = '\n')
+   }
+)
+```
+
+```{r, echo = FALSE}
+warning("We have renamed the package from `sftraj` to `sftrack` to properly reflect the purpose of the package, and the underlying semantical definitions.", noBreaks. = TRUE)
+```
+
+
 # Signatories
 <!-- 
 This section provides the ISC with a view of the support received from the community for a proposal. Acceptance isn't predicated on popularity but community acceptance is important.  Willingness to accept outside input is also a good marker for project delivery. 
@@ -22,9 +47,9 @@ contributed are indicated in parentheses):
     (`refsplitr`)
   * **Rocío Joo**, Postdoctoral Associate at the University of
     Florida, USA
-  * **Clément Calenge**, Statistical Analyst at the *Office national
-    de la chasse et de la faune sauvage*, France (`adehabitatMA`,
-    `adehabitatHR`, `adehabitatHS`, `adehabitatLT`)
+  * **Clément Calenge**, Statistical Analyst at the *Office français
+    de la biodiversité*, France (`adehabitatMA`, `adehabitatHR`,
+    `adehabitatHS`, `adehabitatLT`)
   * **Emiel van Loon**, Assistant Professor at the University of
     Amsterdam, the Netherlands (`zoon`, `RNCEP`).
 
@@ -49,19 +74,19 @@ have authored in parentheses):
     package for the analysis of movement data using network theory;
     `wildxing`: An R package for optimal positioning of widlife
     crossing structures)
-  * **David Cooley** (`gpx`: Converts GPX Files to Simple Features)
-  * **Ross Dwyer** (`VTrack`: A Collection of Tools for the Analysis
-    of Remote Acoustic Telemetry Data)
+  * **David Cooley** (`gpx`: Converts GPX files to simple features)
+  * **Ross Dwyer** (`VTrack`: A collection of tools for the analysis
+    of remote acoustic telemetry data)
   * **Devin Johnson** and **Josh London** (`crawl`: Fit
-    Continuous-Time Correlated Random Walk Models to Animal Movement
-    Data)
-  * **Ioannis Kosmidis** (`trackeR`: Infrastructure for Running,
-    Cycling and Swimming Data from GPS-Enabled Tracking Devices)
-  * **Jed Long** (`wildlifeDI`: Calculate Indices of Dynamic
-    Interaction for Wildlife Tracking Data)
-  * **Alec Robitaille** (`spatsoc`: Group Animal Relocation Data by
-    Spatial and Temporal Relationship)
-  * **Johannes Signer** (amt: Animal Movement Tools)
+    continuous-time correlated random walk models to animal movement
+    data)
+  * **Ioannis Kosmidis** (`trackeR`: Infrastructure for running,
+    cycling and swimming data from GPS-enabled tracking devices)
+  * **Jed Long** (`wildlifeDI`: Calculate indices of dynamic
+    interaction for wildlife tracking data)
+  * **Alec Robitaille** (`spatsoc`: Group animal relocation data by
+    spatial and temporal relationship)
+  * **Johannes Signer** (`amt`: Animal Movement Tools)
 
 From the R Consortium:
 

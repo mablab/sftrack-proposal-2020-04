@@ -17,8 +17,8 @@ nearly ubiquitous, and resulted in an ever-increasing volume of
 *tracking data* (Joo *et al.* 2019). The Movement community in R has
 broadly embraced this new field, and created an entire ecosystem of
 tracking packages, with 58 packages that process, visualize and
-analyze tracking data (Joo *et al.* 2019, now available as a [Tracking
-CRAN Task View](https://cran.r-project.org/web/views/Tracking.html)
+analyze tracking data (Joo *et al.* 2019, now available as a Tracking
+CRAN Task View (https://cran.r-project.org/web/views/Tracking.html)
 that will be updated twice a year).
 
 However, there is a critical lack of standard infrastructure to deal
@@ -28,12 +28,12 @@ After identifying this gap in dealing with tracking data in R, we
 started a long-term effort, to assess and structure the efforts of the
 community with respect to movement data. In particular, with support
 from the **R Consortium** (September 2019–March 2020), we developed
-the [`sftrack` package](https://github.com/mablab/sftrack) to provide
+the `sftrack` package (https://github.com/mablab/sftrack) to provide
 central classes and basic functions to build, handle, summarize and
 plot movement data.
 
-```{r r-ecosystem, echo = FALSE, out.width = "75%", fig.cap = "Network representation of the dependency between 58 tracking packages in R. Solid arrows go towards the package the others depend on. From Joo et al. 2019.", fig.align = "center", fig.pos = "t"}
-knitr::include_graphics("figures/r-ecosystem-depend.png")
+```{r r-ecosystem, echo = FALSE, out.width = "75%", fig.cap = "Network representation of the dependency between 58 tracking packages in R. Solid arrows go towards the package the others depend on. From Joo et al. 2019.", fig.align = "center", fig.pos = "!b"}
+knitr::include_graphics("figures/r-ecosystem-depend.png", error = FALSE)
 ```
 
 The `sftrack` package, completely developed in the open, is now
@@ -45,7 +45,8 @@ developers for broad adoption of `sftrack`. We thus propose a two-step
 extension of the `sftrack` project, aiming at:
 
 1. Working with developers of tracking packages to ensure linkage to
-   `sftrack`.
+   `sftrack`, and enhance interoperability within the tracking
+   ecosystem in R.
 2. Establishing `sftrack` formally in the R ecosystem, with a
-   submission to [CRAN](https://cran.r-project.org/) and to
-   [rOpenSci](https://ropensci.org/).
+   submission to CRAN (https://cran.r-project.org/) and to rOpenSci
+   (https://ropensci.org/).

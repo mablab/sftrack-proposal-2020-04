@@ -1,0 +1,68 @@
+# Signatories
+<!-- 
+This section provides the ISC with a view of the support received from the community for a proposal. Acceptance isn't predicated on popularity but community acceptance is important.  Willingness to accept outside input is also a good marker for project delivery. 
+
+An optional section would be for R-Core signatories where changes to R are proposed.
+-->
+
+
+## Project team
+<!-- 
+Who are the people responsible for actually delivering the project if the proposal gets accepted and are already signed up and rearing to go?
+-->
+
+The **Project team** lists the core members of the work, who initiated
+the `sftrack` package and will be instrumental in progress and
+completion of the project (other R packages to which people
+contributed are indicated in parentheses):
+
+  * **Mathieu Basille**, Assistant Professor at the University of
+    Florida, USA (`adehabitatHS`, `hab`, `rpostgis`, `rpostgisLT`)
+  * **Matt Boone**, Data Scientist at the University of Florida, USA
+    (`refsplitr`)
+  * **Rocío Joo**, Postdoctoral Associate at the University of
+    Florida, USA
+  * **Clément Calenge**, Statistical Analyst at the *Office national
+    de la chasse et de la faune sauvage*, France (`adehabitatMA`,
+    `adehabitatHR`, `adehabitatHS`, `adehabitatLT`)
+  * **Emiel van Loon**, Assistant Professor at the University of
+    Amsterdam, the Netherlands (`zoon`, `RNCEP`).
+
+
+<!-- ## Contributors -->
+<!-- 
+Who are the people who have actively helped with this proposal but won't necessarily be on the core project team later?
+-->
+
+
+## Consulted
+<!-- 
+Who has been given the opportunity to provide feedback on the proposal? This should include any R Consortium & ISC members who the proposal has been discussed with.
+-->
+
+The following R package developers have shown interest in working
+together to use `sftrack` for tracking data (relevant packages they
+have authored in parentheses):
+
+  * **Guillaume Bastille-Rousseau** (`lsmnsd`: Classify movement
+    strategies using a latent-state model and NSD; `moveNT`: An R
+    package for the analysis of movement data using network theory;
+    `wildxing`: An R package for optimal positioning of widlife
+    crossing structures)
+  * **David Cooley** (`gpx`: Converts GPX Files to Simple Features)
+  * **Ross Dwyer** (`VTrack`: A Collection of Tools for the Analysis
+    of Remote Acoustic Telemetry Data)
+  * **Devin Johnson** and **Josh London** (`crawl`: Fit
+    Continuous-Time Correlated Random Walk Models to Animal Movement
+    Data)
+  * **Ioannis Kosmidis** (`trackeR`: Infrastructure for Running,
+    Cycling and Swimming Data from GPS-Enabled Tracking Devices)
+  * **Jed Long** (`wildlifeDI`: Calculate Indices of Dynamic
+    Interaction for Wildlife Tracking Data)
+  * **Alec Robitaille** (`spatsoc`: Group Animal Relocation Data by
+    Spatial and Temporal Relationship)
+  * **Johannes Signer** (amt: Animal Movement Tools)
+
+From the R Consortium:
+
+  * **Hadley Wickham**

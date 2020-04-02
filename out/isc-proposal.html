@@ -402,17 +402,17 @@ Projects should have a definition of done that is measurable, and a thorough und
 <!-- 
 What does success look like? 
 -->
-<p>This project will be successful if <code>sftraj</code> becomes the standard for tracking data in R, both from a user and a developer perspective. Outsourcing code for low level trajectory classes from other packages to <code>sftraj</code> will be the most important outcome. In this stage of the work, success is directly related to the deliverables, namely the vignette, submission of the package to CRAN, submission of the package to rOpenSci, and submission of a companion manuscript to the R Journal by the end of the 4-month period.</p>
+<p>This project will be successful if <code>sftrack</code> becomes the adopted standard for tracking data in R, both from a user and a developer perspective. Successful work with other tracking package developers to integrate <code>sftrack</code> into their data flow will be the most important outcome. If our efforts are successful, <code>sftrack</code> will become the central package in the ecosystem of R tracking packages (i.e. provide a central node in Fig.1).</p>
 </div>
 <div id="measuring-success" class="section level2">
 <h2>Measuring success</h2>
 <!-- 
 How will we know when success is achieved, what markers can we use along the way 
 -->
-<p>Beyond delivering the four products in the planned time frame, success will be measured essentially from the adoption of the package:</p>
+<p>Success will be measured essentially from the adoption of the <code>sftrack</code> package:</p>
 <ul>
-<li>From a user perspective: number of downloads (e.g. using RStudio download statistics);</li>
-<li>From a developer perspective: adoption in tracking packages that will depend on <code>sftraj</code>.</li>
+<li>From a developer perspective, the number of packages that will progressively rely on <code>sftrack</code> will be a direct measure of success: We will measure the number of packages linked to <code>sftrack</code> (<code>Depends</code> and <code>Imports</code>);</li>
+<li>From a user perspective, the number of downloads will tell us how popular the package becomes: We will track downloads through RStudio download statistics.</li>
 </ul>
 </div>
 <div id="future-work" class="section level2">
@@ -420,11 +420,10 @@ How will we know when success is achieved, what markers can we use along the way
 <!-- 
 How could this be extended / developed in the future by yourself and/or the community in general?
 -->
-<p>Three axes for further development will be targeted after this stage of work:</p>
+<p>Two axes for further development will be targeted after this stage of work:</p>
 <ul>
-<li>Provide support to developers of R tracking packages to help them develop conversion tools from their own custom classes to classes from <code>sftraj</code>.</li>
-<li>Dynamic visualization of trajectories, allowing keyboard- and mouse-controlled exploration of trajectories, step by step (based on the solution provided in <code>rpostgisLT</code>).</li>
-<li>Developing tools to clean and interpolate trajectories, based on specific filters and assumptions (e.g. maximum speed allowed, or adding missing locations by interpolation, etc.).</li>
+<li>Continuing support to developers of R tracking packages to help them integrate <code>sftrack</code> classes or develop conversion tools from their own custom classes to <code>sftrack</code> classes.</li>
+<li>Dynamic visualization of trajectories, allowing keyboard- and mouse-controlled step by step exploration of trajectories (based on the solution provided in <code>rpostgisLT</code>).</li>
 </ul>
 </div>
 <div id="key-risks" class="section level2">
@@ -438,13 +437,11 @@ What sort of things could come up that can delay or break the project?
  - [ ] Costs
 
 -->
-<p>The main risk is actually linked to the completion of a functional package at the end of the first stage of the work. Despite long delay to actually start the work due to administrative difficulties, we do not foresee further delay in delivering the foundations of the <code>sftraj</code> package: our team is experienced both in developing R packages and working on tracking data, and the R Movement community is responding very positively to our invitations.</p>
-<p>Specifically for this stage of the work, core project team members have all the expertise required for the deliverables:</p>
+<p>Now that the <code>sftrack</code> package is feature complete, there is no foreseen technical difficulty. The main risk is actually linked to successfully reaching out to other package developers. The R movement has so far responded very positively to our invitations, and several tracking package developers from a range of applications have already expressed their interest in working together on the integration of <code>sftrack</code>.</p>
+<p>In addition, core project team members have all the expertise required for the deliverables:</p>
 <ul>
-<li><strong>Vignette:</strong> Clément Calenge has produced very elaborate vignettes for each package of the <code>adehabitat</code> series. The vignette for <code>adehabitatLT</code> has notably been recognized very positively in our recent survey (Joo <em>et al.</em>, 2019), with 88.6% of respondents expressing that the documentation was either good (allowing the user to do everything they wanted and needed to do with the package) or excellent (allowing users to do even more than what they initially planned because of the excellent quality of the information).</li>
 <li><strong>Submission to CRAN:</strong> Mathieu Basille (<code>rpostgis</code>, <code>rpostgisLT</code>), Clément Calenge (<code>adehabitatMA</code>, <code>adehabitatHR</code>, <code>adehabitatHS</code>, <code>adehabitatLT</code>) and Emiel van Loon (<code>zoon</code>, <code>RNCEP</code>) all have experience preparing and submitting R packages to CRAN.</li>
-<li><strong>Submission to rOpenSci:</strong> Matt Boone has recently been through the process for the package <code>refsplitr</code> (<a href="https://github.com/embruna/refsplitr" class="uri">https://github.com/embruna/refsplitr</a>), for which he was the lead coder. <code>refsplitr</code> is now in the latest stages of review with rOpenSci, and will be added to their list of packages very soon. As a matter of fact, Matt even wrote a detailed blog post about the whole review process at rOpenSci (<a href="https://mablab.org/post/ropensci/" class="uri">https://mablab.org/post/ropensci/</a>).</li>
-<li><strong>Companion manuscript for the R Journal:</strong> Mathieu Basille has worked on a similar approach for the package <code>rpostgis</code>, which is detailed in Bucklin &amp; Basille (2018), a manuscript that was prepared for the R Journal right after the package reached a stable state and was published on CRAN.</li>
+<li><strong>Submission to rOpenSci:</strong> Matt Boone has recently been through the process for the package <code>refsplitr</code> (<a href="https://github.com/embruna/refsplitr" class="uri">https://github.com/embruna/refsplitr</a>), for which he was the lead coder. <code>refsplitr</code> is now part of rOpenSci (<a href="https://docs.ropensci.org/refsplitr/" class="uri">https://docs.ropensci.org/refsplitr/</a>). As a matter of fact, Matt even wrote a detailed blog post about the whole review process at rOpenSci (<a href="https://mablab.org/post/ropensci/" class="uri">https://mablab.org/post/ropensci/</a>).</li>
 </ul>
 </div>
 </div>

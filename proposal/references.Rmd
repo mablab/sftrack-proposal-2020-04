@@ -1,0 +1,9 @@
+# References
+
+- Bucklin, D. & Basille, M. (2018). rpostgis: linking R with a
+  PostGIS spatial database. The R Journal, 10:251–268. https://doi.org/c7fc
+
+- Joo, R., Boone, M. E., Clay, T. A., Patrick, S. C.,
+  Clusella-Trullas, S. & Basille, M. (2020). Navigating through the R
+  packages for movement. Journal of Animal Ecology, 89:248–267. http://dx.doi.org/dcnf
+  Pre-print available at: https://arxiv.org/abs/1901.05935

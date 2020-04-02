@@ -1,0 +1,85 @@
+# Success
+<!-- 
+Projects should have a definition of done that is measurable, and a thorough understanding going in of what the risks are to delivery 
+-->
+
+## Definition of done
+<!-- 
+What does success look like? 
+-->
+
+This project will be successful if `sftrack` becomes the adopted
+standard for tracking data in R, both from a user and a developer
+perspective. Successful work with other tracking package developers to
+integrate `sftrack` into their data flow will be the most important
+outcome. If our efforts are successful, `sftrack` will become the
+central package in the ecosystem of R tracking packages (i.e. provide
+a central node in Fig.1).
+
+
+## Measuring success
+<!-- 
+How will we know when success is achieved, what markers can we use along the way 
+-->
+
+Success will be measured essentially from the adoption of the
+`sftrack` package:
+
+* From a developer perspective, the number of packages that will
+  progressively rely on `sftrack` will be a direct measure of success:
+  We will measure the number of packages linked to `sftrack`
+  (`Depends` and `Imports`);
+* From a user perspective, the number of downloads will tell us how
+  popular the package becomes: We will track downloads through RStudio
+  download statistics.
+
+
+## Future work
+<!-- 
+How could this be extended / developed in the future by yourself and/or the community in general?
+-->
+
+Two axes for further development will be targeted after this stage
+of work:
+
+  * Continuing support to developers of R tracking packages to help
+    them integrate `sftrack` classes or develop conversion tools from
+    their own custom classes to `sftrack` classes.
+  * Dynamic visualization of trajectories, allowing keyboard- and
+    mouse-controlled step by step exploration of trajectories (based
+    on the solution provided in `rpostgisLT`).
+
+
+## Key risks
+<!-- 
+What sort of things could come up that can delay or break the project?
+
+ - [ ] People
+ - [ ] Processes
+ - [ ] Tooling & Technology
+ - [ ] Costs
+
+-->
+
+Now that the `sftrack` package is feature complete, there is no
+foreseen technical difficulty.  The main risk is actually linked to
+successfully reaching out to other package developers. The R movement
+has so far responded very positively to our invitations, and several
+tracking package developers from a range of applications have already
+expressed their interest in working together on the integration of
+`sftrack`.
+
+In addition, core project team members have all the expertise required
+for the deliverables:
+
+* **Submission to CRAN:** Mathieu Basille (`rpostgis`, `rpostgisLT`),
+  Clément Calenge (`adehabitatMA`, `adehabitatHR`, `adehabitatHS`,
+  `adehabitatLT`) and Emiel van Loon (`zoon`, `RNCEP`) all have
+  experience preparing and submitting R packages to CRAN.
+* **Submission to rOpenSci:** Matt Boone has recently been through the
+  process for the package `refsplitr`
+  (https://github.com/embruna/refsplitr), for which he was the lead
+  coder. `refsplitr` is now part of rOpenSci
+  (https://docs.ropensci.org/refsplitr/). As a matter of fact, Matt
+  even wrote a detailed blog post about the whole review process at
+  rOpenSci (https://mablab.org/post/ropensci/).

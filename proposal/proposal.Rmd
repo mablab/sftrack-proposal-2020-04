@@ -15,8 +15,8 @@ the package is now ready for use, we will submit it to
 [CRAN](https://cran.r-project.org/), and we will work with other
 tracking package developers for the integration of `sftrack` into
 their data flow.  Secondly, we will use this collaborative development
-to establish the version 1.0.0, which defines the public API. This
-major stepping stone will be submitted to
+to establish the version 1.0, which defines the stable public
+API. This major milestone will then be submitted to
 [rOpenSci](https://ropensci.org/).
 
 
@@ -31,60 +31,68 @@ Depending on project type the detail section should include:
  - [ ] Assumptions
 -->
 
-In the first stage of the work, we defined a precise data model for
-tracking data, which recognizes the duality of locations, in the form
-of geographic $(x,y,z)$ and temporal $(t)$ coordinates, and steps,
-i.e. the straight-line segment connecting two successive locations.
-Throughout the process, we have focused on providing thorough
-documentation of the package and its specifications, targeting both
-users and package developers, which is essential for a broad adoption
-of the `sftrack` package.  The development of the package happened in
-the open on GitHub (https://github.com/mablab/sftrack), where we have
-received feedback from the community in the form of use cases
+In the first stage of the work, we defined a precise data model that
+recognizes the duality of tracking data, in terms of locations, in the
+form of geographic $(x,y,z)$ and temporal $(t)$ coordinates, and
+steps, i.e. the straight-line segment connecting two successive
+locations.  Throughout the process, we have focused on providing
+thorough documentation of the package and its specifications,
+targeting both users and package developers, which is essential for a
+broad adoption of the `sftrack` package.  The development of the
+package happened in the open on GitHub
+(https://github.com/mablab/sftrack), where we have received feedback
+from the community in the form of use cases
 (https://github.com/mablab/sftrack/issues?q=label%3Ause-case).
 
 In the next stage of this project, we will work with developers to
 finalize the implementation, to ensure that `sftrack` meets all needs
 of the movement community.  We have ongoing discussions with 10
-developers of 11 packages (in addition to those from the core team),
-ranging from import of GPX files to animal movement ecology, through
-human tracking devices for running, cycling and swimming. Specific
-elements that will require further development or fine-tuning include
-the grouping structure (coined `burst`, where the individual
-identification of the moving object is required, and can be completed
-by any number of arbitrary factors) and the error measure (typically
-the error in GPS positions), both of which have no established
-standard.
+developers of 11 packages, in addition to 3 developers of 4 packages
+from the core team. Together, these 15 tracking packages
+(`adehabitatLT`, `adehabitatHR`, `amt`, `crawl`, `gpx`, `hab`,
+`lsmnsd`, `moveHMM`, `moveNT`, `rpostgisLT`, `spatsoc`, `trackeR`,
+`VTrack`, `wildlifeDI`, `wildxing`) represent more than a quarter of
+the tracking ecosystem in R, ranging from import of GPX files to
+animal movement ecology, through human tracking devices for running,
+cycling and swimming, and connection to a spatially-enabled PostgreSQL
+database. Specific elements that will require further development or
+fine-tuning include the grouping structure (coined `burst`, where the
+individual identification of the moving object is required, and can be
+completed by any number of arbitrary factors) and the error
+measurement (typically the error in GPS positions), both of which have
+no established standard.
 
-We will work with developers of R tracking package (including, but not
-limited to the one mentioned above) to integrate `sftrack` in their
-data flow. How we will conduct the work will depend on the role and
-complexity of tracking data in each package:
+We will work with developers of R tracking packages (including, but
+not limited to the ones mentioned above) to integrate `sftrack` in
+their data flow. How we will conduct the work will depend on the role
+and complexity of tracking data in each package:
 
 * Ad-hoc input data not defined in a class (e.g. `crawl` or
-  `spatsoc`): work with the developers on their package initial
-  function(s) to make them `sftrack`-ready (possibly in addition to
-  the original input format).
+  `spatsoc`): We will work with the developers on their package
+  initial function(s) to make them `sftrack`-ready (possibly in
+  addition to the original input format);
 
-* Simple data classes (e.g. `amt::track_xy`/`amt::track_xyt`): work
-  with the developers to directly replace their classes with the one
-  offered by `sftrack`.
+* Simple data classes (e.g. `amt::track_xy`/`amt::track_xyt`): We will
+  work with the developers to directly replace their classes with the
+  one offered by `sftrack`.
 
 * Complex data classes (e.g. `adehabitatLT::ltraj` and
   `trackeR::trackeRdata`): For these packages, the work will be
-  conducted in two phases: 1) develop bi-directional converters from
-  and to `sftrack` classes (which should be lossless both ways); 2)
-  ultimately replace the original data classes with the new ones
-  offered by `sftrack`.
+  conducted in two phases: 1) we will develop bi-directional
+  converters from and to `sftrack` classes (which should be lossless
+  both ways); 2) we will work with the developers to ultimately
+  replace the original data classes with the new ones offered by
+  `sftrack`.
 
-In parallel, we will focus on establishing `sftrack` in the R tracking
-ecosystem.  We will first prepare the package for submission to
-[CRAN](https://cran.r-project.org/), then later focus on the
-preparation and submission of `sftrack` to
-[rOpenSci](https://ropensci.org/). The first step will ensure that the
-package stays up-to-date with R and other package dependencies, while
-the second step will guarantee that `sftrack` adheres to a best
-practice standards for R and reproducible science. Packages submitted
-to rOpenSci go through detailed peer-review by other developers—the
-rOpenSci certification (through their badge) will assure `sftrack` is
-easy to use, well documented, and well coded.
+We will use this process to finalize the public API and establish
+`sftrack` in the R tracking ecosystem.  We will first prepare the
+package for early submission to [CRAN](https://cran.r-project.org/),
+then later focus on the preparation and submission of `sftrack` to
+[rOpenSci](https://ropensci.org/) ( (version 1.0)). The first step
+will ensure that the package stays up-to-date with R and other package
+dependencies, while the second step will guarantee that `sftrack`
+adheres to a best practice standards for R and reproducible
+science. Packages submitted to rOpenSci go through detailed
+peer-review by other developers—the rOpenSci certification (through
+their badge) will assure `sftrack` is easy to use, well documented,
+and well coded.

@@ -1,26 +1,6 @@
-```{r, include = FALSE}
-knitr::knit_hooks$set(
-   error = function(x, options) {
-     paste('\n\n<div class="alert alert-danger">',
-           gsub('##', '\n', gsub('^##\ Error', '**Error**', x)),
-           '</div>', sep = '')
-   },
-   warning = function(x, options) {
-     paste('\n\n<div class="alert alert-warning">',
-           gsub('##', '\n', gsub('^##\ Warning:', '**Warning**', x)),
-           '</div>', sep = '')
-   },
-   message = function(x, options) {
-     paste('\n\n<div class="alert alert-info">',
-           gsub('##', '\n', x),
-           '</div>', sep = '')
-   }
-)
-```
-
-```{r, echo = FALSE}
-warning("We have renamed the package from `sftraj` to `sftrack` to properly reflect the purpose of the package, and the underlying semantical definitions.", noBreaks. = TRUE)
-```
+> **Note:** We have renamed the package from `sftraj` to `sftrack` to
+> properly reflect the purpose of the package, and the underlying
+> semantical definitions.
 
 
 # Signatories
@@ -37,12 +17,10 @@ Who are the people responsible for actually delivering the project if the propos
 -->
 
 The **Project team** lists the core members of the work, who initiated
-the `sftrack` package and will be instrumental in progress and
+the `sftrack` package and will be instrumental in the progress and
 completion of the project (other R packages to which people
 contributed are indicated in parentheses):
 
-  * **Mathieu Basille**, Assistant Professor at the University of
-    Florida, USA (`adehabitatHS`, `hab`, `rpostgis`, `rpostgisLT`)
   * **Matt Boone**, Data Scientist at the University of Florida, USA
     (`refsplitr`)
   * **Rocío Joo**, Postdoctoral Associate at the University of
@@ -51,7 +29,9 @@ contributed are indicated in parentheses):
     la biodiversité, France (`adehabitatMA`, `adehabitatHR`,
     `adehabitatHS`, `adehabitatLT`)
   * **Emiel van Loon**, Assistant Professor at the University of
-    Amsterdam, the Netherlands (`zoon`, `RNCEP`).
+    Amsterdam, the Netherlands (`zoon`, `RNCEP`)
+  * **Mathieu Basille**, Assistant Professor at the University of
+    Florida, USA (`adehabitatHS`, `hab`, `rpostgis`, `rpostgisLT`).
 
 
 <!-- ## Contributors -->

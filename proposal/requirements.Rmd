@@ -15,7 +15,7 @@ developers. We have already established working connections with
 several of them, notably through our efforts in the movement community
 over the last two years.
 
-In particular, we request \$10,000 in salary for Matt Boone (1.79
+In particular, we request \$10,000 in salary for Matt Boone (1.74
 months over the course of the project), Data Scientist at the
 University of Florida. Matt has a solid experience in R which
 complements that of other team members, and is the lead coder of
@@ -54,12 +54,12 @@ remain open to the entire movement community.
 
 -->
 
-We request a total of \$10,000 to support 1.79 months of Matt Boone,
+We request a total of \$10,000 to support 1.74 months of Matt Boone,
 Data Scientist (Biological Scientist II) in the MabLab at the
 University of Florida.
 
-* Salary: \$7,369
-* Fringe rate (35.70 %): \$2,631
+* Salary: \$7,189
+* Fringe rate (39.10 %): \$2,811
 * **Total award = \$10,000**
 
 

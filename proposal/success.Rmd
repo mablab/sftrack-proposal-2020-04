@@ -44,10 +44,11 @@ of work:
 
   * Continuing support to developers of R tracking packages to help
     them integrate `sftrack` classes or develop conversion tools from
-    their own custom classes to `sftrack` classes.
-  * Dynamic visualization of trajectories, allowing keyboard- and
-    mouse-controlled step by step exploration of trajectories (based
-    on the solution provided in `rpostgisLT`).
+    their own custom classes to `sftrack` classes;
+  * Dynamic visualization of trajectories, allowing step by step
+    exploration of trajectories with keyboard and mouse control (based
+    on the solution provided in `rpostgisLT`, see
+    https://cran.r-project.org/web/packages/rpostgisLT/vignettes/explorePgtraj.html).
 
 
 ## Key risks

@@ -18,12 +18,11 @@ positively on Twitter, which we use to channel our communication. We
 explained our approach and decisions in a series of 4 blog posts
 (https://mablab.org/tags/sftraj/). We used them to call for feedback
 from the community, and received the perspective on `sftrack` from 10
-developers of 11 packages (`amt`, `crawl`, `gpx`, `lsmnsd`, `moveHMM`,
-`moveNT`, `spatsoc`,`trackeR`, `VTrack`, `wildlifeDI`, `wildxing`),
-who expressed interest in working together. Altogether, feedback
-received only confirmed the need for a central tracking package in
-R. We will keep working in the open, and collect feedback from the
-whole R movement community.
+developers of 11 packages (outside of the core team), who expressed
+interest in working together. Altogether, the feedback we received
+only confirmed the need for a central tracking package in R. We will
+keep working in the open, and collect feedback from the whole movement
+community.
 
 
 ## Technical delivery
@@ -49,17 +48,17 @@ the grant:
   conversion, and work towards lossless conversion both ways.
   Depending on the specific requirements of other classes, this will
   require adjusting the classes already developed in `sftrack`.
-* **Integration of `strack`** [month 2–4]: In parallel, we will work
+* **Integration of `sftrack`** [month 2–4]: In parallel, we will work
   with developers willing to fully integrate the solution offered by
-  `sftrack` at the core of their data flow. This step may require
+  `sftrack` into their package data flow. This step may require
   substantial rewriting of other packages — while we will not take the
   lead on this task, we will provide specific guidance and feedback,
   and potentially adjust `sftrack` to match the needs of each package
   involved at this stage.
 * **Submission to rOpenSci** [month 5–6]: In the last two months, we
   will go one step further and actually prepare `sftrack` for
-  rOpenSci, which will coincide with the stable API of version
-  1.0.0. rOpenSci emphasizes (and basically enforces) a package's
+  rOpenSci, which will coincide with the stable public API of version
+  1.0. rOpenSci emphasizes (and basically enforces) a package's
   quality, fit, documentation, and clarity. `sftrack` would fit in the
   special category "geospatial data". Becoming the first official
   rOpenSci tracking package (none of the 58 existing tracking packages

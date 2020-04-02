@@ -1,4 +1,4 @@
-proposal<-"sftrack, part II: Developer task force for a broad adoption"
+proposal<-"sftrack v1.0: Stable API for a broad adoption"
 sponsor <- "R Consortium's ISC"
 proposal.file<-"isc-proposal.Rmd"
 author<-"Mathieu Basille"

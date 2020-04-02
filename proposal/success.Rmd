@@ -30,8 +30,8 @@ Success will be measured essentially from the adoption of the
   We will measure the number of packages linked to `sftrack`
   (`Depends` and `Imports`);
 * From a user perspective, the number of downloads will tell us how
-  popular the package becomes: We will track downloads through RStudio
-  download statistics.
+  popular the package becomes: We will track CRAN package download
+  statistics, from the RStudio CRAN mirror.
 
 
 ## Future work

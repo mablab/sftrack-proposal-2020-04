@@ -35,7 +35,7 @@ In the first stage of the work, we defined a precise data model for
 tracking data, which recognizes the duality of locations, in the form
 of geographic $(x,y,z)$ and temporal $(t)$ coordinates, and steps,
 i.e. the straight-line segment connecting two successive locations.
-Throughout the process, we have focused on providing solid
+Throughout the process, we have focused on providing thorough
 documentation of the package and its specifications, targeting both
 users and package developers, which is essential for a broad adoption
 of the `sftrack` package.  The development of the package happened in
@@ -46,14 +46,15 @@ received feedback from the community in the form of use cases
 In the next stage of this project, we will work with developers to
 finalize the implementation, to ensure that `sftrack` meets all needs
 of the movement community.  We have ongoing discussions with 10
-developers of 11 packages, ranging from import of GPX files to animal
-movement ecology, through human tracking devices for running, cycling
-and swimming. Specific elements that will require further development
-or fine-tuning include the grouping structure (coined `burst`, where
-the individual identification of the moving object is required, and
-can be completed by any number of arbitrary factors) and the error
-measure (typically the error in GPS positions), both of which have no
-established standard. 
+developers of 11 packages (in addition to those from the core team),
+ranging from import of GPX files to animal movement ecology, through
+human tracking devices for running, cycling and swimming. Specific
+elements that will require further development or fine-tuning include
+the grouping structure (coined `burst`, where the individual
+identification of the moving object is required, and can be completed
+by any number of arbitrary factors) and the error measure (typically
+the error in GPS positions), both of which have no established
+standard.
 
 We will work with developers of R tracking package (including, but not
 limited to the one mentioned above) to integrate `sftrack` in their
@@ -62,7 +63,7 @@ complexity of tracking data in each package:
 
 * Ad-hoc input data not defined in a class (e.g. `crawl` or
   `spatsoc`): work with the developers on their package initial
-  function(s) to make them `sftrack`-ready (preferably in addition to
+  function(s) to make them `sftrack`-ready (possibly in addition to
   the original input format).
 
 * Simple data classes (e.g. `amt::track_xy`/`amt::track_xyt`): work
@@ -73,8 +74,8 @@ complexity of tracking data in each package:
   `trackeR::trackeRdata`): For these packages, the work will be
   conducted in two phases: 1) develop bi-directional converters from
   and to `sftrack` classes (which should be lossless both ways); 2)
-  ultimately replace these data classes with the new ones offered by
-  `sftrack`.
+  ultimately replace the original data classes with the new ones
+  offered by `sftrack`.
 
 In parallel, we will focus on establishing `sftrack` in the R tracking
 ecosystem.  We will first prepare the package for submission to

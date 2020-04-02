@@ -3,17 +3,17 @@ knitr::knit_hooks$set(
    error = function(x, options) {
      paste('\n\n<div class="alert alert-danger">',
            gsub('##', '\n', gsub('^##\ Error', '**Error**', x)),
-           '</div>', sep = '\n')
+           '</div>', sep = '')
    },
    warning = function(x, options) {
      paste('\n\n<div class="alert alert-warning">',
            gsub('##', '\n', gsub('^##\ Warning:', '**Warning**', x)),
-           '</div>', sep = '\n')
+           '</div>', sep = '')
    },
    message = function(x, options) {
      paste('\n\n<div class="alert alert-info">',
            gsub('##', '\n', x),
-           '</div>', sep = '\n')
+           '</div>', sep = '')
    }
 )
 ```
@@ -47,8 +47,8 @@ contributed are indicated in parentheses):
     (`refsplitr`)
   * **Rocío Joo**, Postdoctoral Associate at the University of
     Florida, USA
-  * **Clément Calenge**, Statistical Analyst at the *Office français
-    de la biodiversité*, France (`adehabitatMA`, `adehabitatHR`,
+  * **Clément Calenge**, Statistical Analyst at the Office français de
+    la biodiversité, France (`adehabitatMA`, `adehabitatHR`,
     `adehabitatHS`, `adehabitatLT`)
   * **Emiel van Loon**, Assistant Professor at the University of
     Amsterdam, the Netherlands (`zoon`, `RNCEP`).

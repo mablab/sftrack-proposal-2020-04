@@ -11,7 +11,7 @@ Covering the planning phase, this section should provide a relatively detailed p
 -->
 
 The `sftrack` package is meant to be a cornerstone for the development
-of a more cohesive Movement community in R. The first stage of the
+of a more cohesive movement community in R. The first stage of the
 work, which is just finished, has provided solid technical foundations
 for tracking data in R. Our project has already been received very
 positively on Twitter, which we use to channel our communication. We
@@ -20,10 +20,10 @@ explained our approach and decisions in a series of 4 blog posts
 from the community, and received the perspective on `sftrack` from 10
 developers of 11 packages (`amt`, `crawl`, `gpx`, `lsmnsd`, `moveHMM`,
 `moveNT`, `spatsoc`,`trackeR`, `VTrack`, `wildlifeDI`, `wildxing`),
-who shown interest in working together. Altogether, feedback received
-only confirmed the need for a central movement package in R. We will
-keep working in the open, and collect feedback from the whole R
-movement community.
+who expressed interest in working together. Altogether, feedback
+received only confirmed the need for a central tracking package in
+R. We will keep working in the open, and collect feedback from the
+whole R movement community.
 
 
 ## Technical delivery
@@ -78,12 +78,12 @@ Covering non-technical activities like on-going publicity, paper preparation, di
  - [ ] ISC meetings
 -->
 
-While the work on `sftrack` will happen completely in the open, we
-will keep communicating our progress, directly on Twitter as well as
-with more detailed blog posts on https://mablab.org/. We will watch
-for feedback, notably through the GitHub repository, which will
-collect use cases, bug issues and suggestions for enhancements. We
-have already successfully presented our work on `sftrack` at the 2020
-Moving2Gather conference (held in Rennes, France) in March 2020), and
+The work on `sftrack` will happen completely in the open. We will keep
+communicating our progress, directly on Twitter as well as with more
+detailed blog posts on https://mablab.org/. We will watch for
+feedback, notably through the GitHub repository, which will collect
+use cases, bug issues and suggestions for enhancements. We have
+already successfully presented our work on `sftrack` at the 2020
+Moving2Gather conference (held in Rennes, France, in March 2020), and
 will certainly consider other venues once the situation with COVID-19
-allows us to normally travel.
+allows us to travel normally.

@@ -14,12 +14,12 @@ Movement defined broadly plays a central role in fields as diverse as
 transportation, sports, ecology, music, medicine and data science
 (Gudmundsson *et al.* 2012). Miniaturized tracking devices have become
 nearly ubiquitous, and resulted in an ever-increasing volume of
-*tracking data* (Joo *et al.* 2019). The Movement community in R has
+*tracking data* (Joo *et al.* 2020). The Movement community in R has
 broadly embraced this new field, and created an entire ecosystem of
 tracking packages, with 58 packages that process, visualize and
-analyze tracking data (Joo *et al.* 2019, now available as a Tracking
-CRAN Task View (https://cran.r-project.org/web/views/Tracking.html)
-that will be updated twice a year).
+analyze tracking data (Joo *et al.* 2020), now available as a Tracking
+CRAN Task View (https://cran.r-project.org/view=Tracking) that will be
+updated twice a year).
 
 However, there is a critical lack of standard infrastructure to deal
 with movement. As a matter of fact, half of the tracking packages work
@@ -32,7 +32,7 @@ the `sftrack` package (https://github.com/mablab/sftrack) to provide
 central classes and basic functions to build, handle, summarize and
 plot movement data.
 
-```{r r-ecosystem, echo = FALSE, out.width = "75%", fig.cap = "Network representation of the dependency between 58 tracking packages in R. Solid arrows go towards the package the others depend on. From Joo et al. 2019.", fig.align = "center", fig.pos = "!b"}
+```{r r-ecosystem, echo = FALSE, out.width = "75%", fig.cap = "Network representation of the dependency between 58 tracking packages in R. Solid arrows go towards the package the others depend on. From Joo et al. 2020.", fig.align = "center", fig.pos = "!b"}
 knitr::include_graphics("figures/r-ecosystem-depend.png", error = FALSE)
 ```
 

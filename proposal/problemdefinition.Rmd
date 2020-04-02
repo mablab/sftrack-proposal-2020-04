@@ -10,41 +10,43 @@ It is important to cover:
  - [ ] Why it should be tackled
 -->
 
-Movement defined broadly plays a central role in fields as diverse as
-transportation, sports, ecology, music, medicine and data science
-(Gudmundsson *et al.* 2012). Miniaturized tracking devices have become
-nearly ubiquitous, and resulted in an ever-increasing volume of
-*tracking data* (Joo *et al.* 2020). The movement community in R has
-broadly embraced this new field, and created an entire ecosystem of
-tracking packages, with 58 packages that process, visualize and
-analyze tracking data (Joo *et al.* 2020).
+Miniaturized tracking devices have become nearly ubiquitous, and
+resulted in an ever-increasing volume of *tracking data* in fields as
+diverse as transportation, sports, ecology, music, medicine and data
+science (Gudmundsson *et al.* 2012).  The movement community in R has
+broadly embraced this new field, and created an entire ecosystem of 58
+tracking packages that process, visualize and analyze tracking data
+(Joo *et al.* 2020). This intense activity has led to the need of 1) a
+modular solution to handle tracking data in R; 2) links with other
+packages to streamline the use of tracking data in R. We developed the
+`sftrack` package (https://github.com/mablab/sftrack), with support
+from the **R Consortium** (September 2019–March 2020), to answer the
+first point. We now request additional funding to move a step further
+and create a more integrated tracking ecosystem across fields in R.
 
-However, there is a critical lack of standard infrastructure to deal
-with movement. As a matter of fact, half of the tracking packages work
+There is a critical lack of standard infrastructure to deal with
+movement in R. As a matter of fact, half of the tracking packages work
 in isolation, not being linked to any other tracking package (Fig.1).
-After identifying this gap in dealing with tracking data in R, we
-started a long-term effort, to assess and structure the efforts of the
-community with respect to movement data. For instance, we created a
-Tracking CRAN Task View (https://cran.r-project.org/view=Tracking),
-listing and describing all tracking packages, that will be updated
-twice a year). Most importantly, we developed the `sftrack` package
-(https://github.com/mablab/sftrack), with support from the **R
-Consortium** (September 2019–March 2020) to provide central classes
-and basic functions to build, handle, summarize and plot movement
-data.
+We developed the package `sftrack` to fill up this gap: `sftrack`
+provides central classes and basic functions to build, handle,
+summarize and plot movement data. `sftrack` is part of a global
+effort, to assess and structure the efforts of the tracking community
+in R. For instance, we created a Tracking CRAN Task View describing
+all tracking packages (updated twice a year, available at:
+https://cran.r-project.org/view=Tracking).
 
-```{r r-ecosystem, echo = FALSE, out.width = "75%", fig.cap = "Network representation of the dependency between 58 tracking packages in R. Solid arrows go towards the package the others depend on. From Joo et al. 2020.", fig.align = "center", fig.pos = "!b"}
+```{r r-ecosystem, echo = FALSE, out.width = "55%", fig.cap = "Network representation of the dependency between 58 tracking packages in R. Solid arrows go towards the package the others depend on. From Joo et al. 2020.", fig.align = "center", fig.pos = "!b"}
 knitr::include_graphics("figures/r-ecosystem-depend.png", error = FALSE)
 ```
 
-The `sftrack` package, completely developed in the open, is now
-full-featured, and is ready for broad testing. This milestone in the
-development of `sftrack` already contributes solid foundations for the
-tracking ecosystem in R. There is a need now to deepen the connections
-with other packages, and work together with package developers for
-broad adoption of `sftrack`. We thus propose an extension of the
-`sftrack` project aiming at reaching the stable API of the package
-(i.e. version 1.0) by:
+After the first stage of development, completely in the open, the
+`sftrack` package is now full-featured, and is ready for broad
+testing. This milestone in the development of `sftrack` already
+contributes solid foundations for the tracking ecosystem in R. There
+is a need now to deepen the connections with other packages, and work
+together with package developers for broad adoption of `sftrack`. We
+thus propose an extension of the `sftrack` project aiming at reaching
+the stable API of the package (i.e. version 1.0) by:
 
 1. Working with developers of tracking packages to ensure linkage to
    `sftrack`, and enhance interoperability within the tracking

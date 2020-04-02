@@ -21,8 +21,8 @@ the `sftrack` package and will be instrumental in the progress and
 completion of the project (other R packages to which people
 contributed are indicated in parentheses):
 
-  * **Matt Boone**, Data Scientist at the University of Florida, USA
-    (`refsplitr`)
+  * **Matthew E. Boone**, Data Scientist at the University of Florida,
+    USA (`refsplitr`)
   * **Rocío Joo**, Postdoctoral Associate at the University of
     Florida, USA
   * **Clément Calenge**, Statistical Analyst at the Office français de

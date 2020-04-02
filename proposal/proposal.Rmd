@@ -9,14 +9,14 @@ At a high-level address what your proposal is and how it will address the proble
 -->
 
 During the first stage of the work (September 2019 until March 2020),
-we developed all features of the `sftrack`, which now provides
-foundations to build, handle, summarize, and plot tracking data. As
-the package is now ready for use, we will work with R package
-developers to help them integrate and adjust `sftrack` solutions into
-their data flow (June–August). Secondly, we will use this
-collaborative development to establish the version 1.0.0, which
-defines the public API. This major stepping stone will be submitted to
-to [CRAN](https://cran.r-project.org/) and to
+we developed all features of the `sftrack` package, which now provides
+foundations to build, handle, summarize, and plot tracking data.  As
+the package is now ready for use, we will submit it to
+[CRAN](https://cran.r-project.org/), and we will work with other
+tracking package developers for the integration of `sftrack` into
+their data flow.  Secondly, we will use this collaborative development
+to establish the version 1.0.0, which defines the public API. This
+major stepping stone will be submitted to
 [rOpenSci](https://ropensci.org/).
 
 
@@ -45,8 +45,8 @@ received feedback from the community in the form of use cases
 
 In the next stage of this project, we will work with developers to
 finalize the implementation, to ensure that `sftrack` meets all needs
-of the movement community.  We have ongoing discussions with 9
-developers of 10 packages, ranging from import of GPX files to animal
+of the movement community.  We have ongoing discussions with 10
+developers of 11 packages, ranging from import of GPX files to animal
 movement ecology, through human tracking devices for running, cycling
 and swimming. Specific elements that will require further development
 or fine-tuning include the grouping structure (coined `burst`, where
@@ -60,10 +60,10 @@ limited to the one mentioned above) to integrate `sftrack` in their
 data flow. How we will conduct the work will depend on the role and
 complexity of tracking data in each package:
 
-* Input data only (e.g. `crawl` or `spatsoc`): work with the
-  developers on their package initial function(s) to make them
-  `sftrack`-ready (preferably in addition to the original input
-  format).
+* Ad-hoc input data not defined in a class (e.g. `crawl` or
+  `spatsoc`): work with the developers on their package initial
+  function(s) to make them `sftrack`-ready (preferably in addition to
+  the original input format).
 
 * Simple data classes (e.g. `amt::track_xy`/`amt::track_xyt`): work
   with the developers to directly replace their classes with the one
@@ -76,10 +76,10 @@ complexity of tracking data in each package:
   ultimately replace these data classes with the new ones offered by
   `sftrack`.
 
-The second stage of work will entirely be focused on establishing
-`sftrack` in the R tracking ecosystem.  We will first prepare the
-package for submission to [CRAN](https://cran.r-project.org/), then
-focus on the preparation and submission of `sftrack` to
+In parallel, we will focus on establishing `sftrack` in the R tracking
+ecosystem.  We will first prepare the package for submission to
+[CRAN](https://cran.r-project.org/), then later focus on the
+preparation and submission of `sftrack` to
 [rOpenSci](https://ropensci.org/). The first step will ensure that the
 package stays up-to-date with R and other package dependencies, while
 the second step will guarantee that `sftrack` adheres to a best

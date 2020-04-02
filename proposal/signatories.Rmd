@@ -84,6 +84,8 @@ have authored in parentheses):
     cycling and swimming data from GPS-enabled tracking devices)
   * **Jed Long** (`wildlifeDI`: Calculate indices of dynamic
     interaction for wildlife tracking data)
+  * **Théo Michelot** (`moveHMM`: Animal Movement Modelling using
+    Hidden Markov Models)
   * **Alec Robitaille** (`spatsoc`: Group animal relocation data by
     spatial and temporal relationship)
   * **Johannes Signer** (`amt`: Animal Movement Tools)

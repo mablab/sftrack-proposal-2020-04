@@ -11,7 +11,7 @@
 
 <meta name="author" content="Mathieu Basille" />
 
-<meta name="date" content="2020-04-01" />
+<meta name="date" content="2020-04-02" />
 
 <title>sftrack, part II: Developer task force for a broad adoption</title>
 
@@ -180,7 +180,7 @@ summary {
 
 <h1 class="title toc-ignore">sftrack, part II: Developer task force for a broad adoption</h1>
 <h4 class="author">Mathieu Basille</h4>
-<h4 class="date">2020-04-01</h4>
+<h4 class="date">2020-04-02</h4>
 
 </div>
 
@@ -227,6 +227,7 @@ Who has been given the opportunity to provide feedback on the proposal? This sho
 <li><strong>Devin Johnson</strong> and <strong>Josh London</strong> (<code>crawl</code>: Fit continuous-time correlated random walk models to animal movement data)</li>
 <li><strong>Ioannis Kosmidis</strong> (<code>trackeR</code>: Infrastructure for running, cycling and swimming data from GPS-enabled tracking devices)</li>
 <li><strong>Jed Long</strong> (<code>wildlifeDI</code>: Calculate indices of dynamic interaction for wildlife tracking data)</li>
+<li><strong>Théo Michelot</strong> (<code>moveHMM</code>: Animal Movement Modelling using Hidden Markov Models)</li>
 <li><strong>Alec Robitaille</strong> (<code>spatsoc</code>: Group animal relocation data by spatial and temporal relationship)</li>
 <li><strong>Johannes Signer</strong> (<code>amt</code>: Animal Movement Tools)</li>
 </ul>
@@ -256,10 +257,10 @@ It is important to cover:
 Network representation of the dependency between 58 tracking packages in R. Solid arrows go towards the package the others depend on. From Joo et al. 2019.
 </p>
 </div>
-<p>The <code>sftrack</code> package, completely developed in the open, is now full-featured, and is ready for broad testing. This stepping stone in the development of <code>sftrack</code> already contributes solid foundations for the tracking ecosystem in R. There is a need now to deepen the connections with other packages, and work together with package developers for broad adoption of <code>sftrack</code>. We thus propose a two-step extension of the <code>sftrack</code> project, aiming at:</p>
+<p>The <code>sftrack</code> package, completely developed in the open, is now full-featured, and is ready for broad testing. This stepping stone in the development of <code>sftrack</code> already contributes solid foundations for the tracking ecosystem in R. There is a need now to deepen the connections with other packages, and work together with package developers for broad adoption of <code>sftrack</code>. We thus propose an extension of the <code>sftrack</code> project aiming at:</p>
 <ol style="list-style-type: decimal">
 <li>Working with developers of tracking packages to ensure linkage to <code>sftrack</code>, and enhance interoperability within the tracking ecosystem in R.</li>
-<li>Establishing <code>sftrack</code> formally in the R ecosystem, with a submission to CRAN (<a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a>) and to rOpenSci (<a href="https://ropensci.org/" class="uri">https://ropensci.org/</a>).</li>
+<li>Establishing <code>sftrack</code> formally in the R ecosystem, through submissions to CRAN (<a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a>) and to rOpenSci (<a href="https://ropensci.org/" class="uri">https://ropensci.org/</a>).</li>
 </ol>
 </div>
 <div id="the-proposal" class="section level1">
@@ -272,7 +273,7 @@ This is where the proposal should be outlined.
 <!--
 At a high-level address what your proposal is and how it will address the problem identified. Highlight any benefits to the R Community that follow from solving the problem. This should be your most compelling section.
 -->
-<p>During the first stage of the work (September 2019 until March 2020), we developed all features of the <code>sftrack</code>, which now provides foundations to build, handle, summarize, and plot tracking data. As the package is now ready for use, we will work with R package developers to help them integrate and adjust <code>sftrack</code> solutions into their data flow (June–August). Secondly, we will use this collaborative development to establish the version 1.0.0, which defines the public API. This major stepping stone will be submitted to to <a href="https://cran.r-project.org/">CRAN</a> and to <a href="https://ropensci.org/">rOpenSci</a>.</p>
+<p>During the first stage of the work (September 2019 until March 2020), we developed all features of the <code>sftrack</code> package, which now provides foundations to build, handle, summarize, and plot tracking data. As the package is now ready for use, we will submit it to <a href="https://cran.r-project.org/">CRAN</a>, and we will work with other tracking package developers for the integration of <code>sftrack</code> into their data flow. Secondly, we will use this collaborative development to establish the version 1.0.0, which defines the public API. This major stepping stone will be submitted to <a href="https://ropensci.org/">rOpenSci</a>.</p>
 </div>
 <div id="detail" class="section level2">
 <h2>Detail</h2>
@@ -286,20 +287,20 @@ Depending on project type the detail section should include:
  - [ ] Assumptions
 -->
 <p>In the first stage of the work, we defined a precise data model for tracking data, which recognizes the duality of locations, in the form of geographic <span class="math inline">\((x,y,z)\)</span> and temporal <span class="math inline">\((t)\)</span> coordinates, and steps, i.e. the straight-line segment connecting two successive locations. Throughout the process, we have focused on providing solid documentation of the package and its specifications, targeting both users and package developers, which is essential for a broad adoption of the <code>sftrack</code> package. The development of the package happened in the open on GitHub (<a href="https://github.com/mablab/sftrack" class="uri">https://github.com/mablab/sftrack</a>), where we have received feedback from the community in the form of use cases (<a href="https://github.com/mablab/sftrack/issues?q=label%3Ause-case">https://github.com/mablab/sftrack/issues?q=label%3Ause-case</a>).</p>
-<p>In the next stage of this project, we will work with developers to finalize the implementation, to ensure that <code>sftrack</code> meets all needs of the movement community. We have ongoing discussions with 9 developers of 10 packages, ranging from import of GPX files to animal movement ecology, through human tracking devices for running, cycling and swimming. Specific elements that will require further development or fine-tuning include the grouping structure (coined <code>burst</code>, where the individual identification of the moving object is required, and can be completed by any number of arbitrary factors) and the error measure (typically the error in GPS positions), both of which have no established standard.</p>
+<p>In the next stage of this project, we will work with developers to finalize the implementation, to ensure that <code>sftrack</code> meets all needs of the movement community. We have ongoing discussions with 10 developers of 11 packages, ranging from import of GPX files to animal movement ecology, through human tracking devices for running, cycling and swimming. Specific elements that will require further development or fine-tuning include the grouping structure (coined <code>burst</code>, where the individual identification of the moving object is required, and can be completed by any number of arbitrary factors) and the error measure (typically the error in GPS positions), both of which have no established standard.</p>
 <p>We will work with developers of R tracking package (including, but not limited to the one mentioned above) to integrate <code>sftrack</code> in their data flow. How we will conduct the work will depend on the role and complexity of tracking data in each package:</p>
 <ul>
-<li><p>Input data only (e.g. <code>crawl</code> or <code>spatsoc</code>): work with the developers on their package initial function(s) to make them <code>sftrack</code>-ready (preferably in addition to the original input format).</p></li>
+<li><p>Ad-hoc input data not defined in a class (e.g. <code>crawl</code> or <code>spatsoc</code>): work with the developers on their package initial function(s) to make them <code>sftrack</code>-ready (preferably in addition to the original input format).</p></li>
 <li><p>Simple data classes (e.g. <code>amt::track_xy</code>/<code>amt::track_xyt</code>): work with the developers to directly replace their classes with the one offered by <code>sftrack</code>.</p></li>
 <li><p>Complex data classes (e.g. <code>adehabitatLT::ltraj</code> and <code>trackeR::trackeRdata</code>): For these packages, the work will be conducted in two phases: 1) develop bi-directional converters from and to <code>sftrack</code> classes (which should be lossless both ways); 2) ultimately replace these data classes with the new ones offered by <code>sftrack</code>.</p></li>
 </ul>
-<p>The second stage of work will entirely be focused on establishing <code>sftrack</code> in the R tracking ecosystem. We will first prepare the package for submission to <a href="https://cran.r-project.org/">CRAN</a>, then focus on the preparation and submission of <code>sftrack</code> to <a href="https://ropensci.org/">rOpenSci</a>. The first step will ensure that the package stays up-to-date with R and other package dependencies, while the second step will guarantee that <code>sftrack</code> adheres to a best practice standards for R and reproducible science. Packages submitted to rOpenSci go through detailed peer-review by other developers—the rOpenSci certification (through their badge) will assure <code>sftrack</code> is easy to use, well documented, and well coded.</p>
+<p>In parallel, we will focus on establishing <code>sftrack</code> in the R tracking ecosystem. We will first prepare the package for submission to <a href="https://cran.r-project.org/">CRAN</a>, then later focus on the preparation and submission of <code>sftrack</code> to <a href="https://ropensci.org/">rOpenSci</a>. The first step will ensure that the package stays up-to-date with R and other package dependencies, while the second step will guarantee that <code>sftrack</code> adheres to a best practice standards for R and reproducible science. Packages submitted to rOpenSci go through detailed peer-review by other developers—the rOpenSci certification (through their badge) will assure <code>sftrack</code> is easy to use, well documented, and well coded.</p>
 </div>
 </div>
 <div id="project-plan" class="section level1">
 <h1>Project plan</h1>
-<div id="start-up-phase" class="section level2">
-<h2>Start-up phase</h2>
+<div id="start-up-phase-done" class="section level2">
+<h2>Start-up phase (DONE)</h2>
 <!--
 Covering the planning phase, this section should provide a relatively detailed plan of how work will start on the project. This section is important because projects need to get up and running quickly.
 
@@ -308,7 +309,7 @@ Covering the planning phase, this section should provide a relatively detailed p
  - [ ] Licence decisions
  - [ ] Reporting framework
 -->
-<p>The <code>sftraj</code> package is meant to be a cornerstone for the development of a more cohesive Movement community in R. The first stage of the work, which just started, will deliver solid technical foundations for trajectories in R. Our project has already been received very positively on Twitter, which we use to channel our communication. Two blog posts (<a href="https://mablab.org/post/sftraj-intro/" class="uri">https://mablab.org/post/sftraj-intro/</a> and <a href="https://mablab.org/post/sftraj-plan/" class="uri">https://mablab.org/post/sftraj-plan/</a>) explained what we are doing, and why we need feedback from the community. Interestingly, in a very short period of time, we already received the perspective on <code>sftraj</code> from developers of 4 tracking packages (<code>amt</code>, <code>crawl</code>, <code>spatsoc</code>, and <code>wildlifeDI</code>), which comes in addition to our early discussions with 5 developers from three other tracking packages (<code>VTrack</code>, <code>moveHMM</code> and <code>momentuHMM</code>). Altogether, feedback received only confirms the need for a central trajectory package in R.</p>
+<p>The <code>sftrack</code> package is meant to be a cornerstone for the development of a more cohesive Movement community in R. The first stage of the work, which is just finished, has provided solid technical foundations for tracking data in R. Our project has already been received very positively on Twitter, which we use to channel our communication. We explained our approach and decisions in a series of 4 blog posts (<a href="https://mablab.org/tags/sftraj/" class="uri">https://mablab.org/tags/sftraj/</a>). We used them to call for feedback from the community, and received the perspective on <code>sftrack</code> from 10 developers of 11 packages (<code>amt</code>, <code>crawl</code>, <code>gpx</code>, <code>lsmnsd</code>, <code>moveHMM</code>, <code>moveNT</code>, <code>spatsoc</code>,<code>trackeR</code>, <code>VTrack</code>, <code>wildlifeDI</code>, <code>wildxing</code>), who shown interest in working together. Altogether, feedback received only confirmed the need for a central movement package in R. We will keep working in the open, and collect feedback from the whole R movement community.</p>
 </div>
 <div id="technical-delivery" class="section level2">
 <h2>Technical delivery</h2>
@@ -317,12 +318,12 @@ Covering the actual delivery of the project this section should provide at least
 
 Including target dates is really important as you need to be committed and the ISC need to have a means of tracking delivery
 -->
-<p>Progress will focus on the delivery of four products of increasing complexity. They will be addressed one by one, as they all build on top of each other:</p>
+<p>We will deliver the following products during the 6-month period of the grant:</p>
 <ul>
-<li><strong>Vignette of the package</strong> [month 1]: Writing a vignette will provide a reproducible tutorial which will guide through the use of <code>sftraj</code>. A well-written vignette is now essential for users to get started and see the benefits of using a package.</li>
-<li><strong>Submission to CRAN</strong> [month 1]: During the first stage of the work, <code>sftraj</code> will become full-featured and installable from GitHub. In this second stage, we will ensure that the package is ready for CRAN and finally submit it there. Publication on CRAN will allow for easy installation on any computer, as well as enabling the dependency system of R packages, which are both mandatory for broad adoption.</li>
-<li><strong>Submission to rOpenSci</strong> [month 2]: After the package has been submitted to CRAN, we will go one step further and actually prepare it for rOpenSci. rOpenSci emphasizes (and basically enforces) a package’s quality, fit, documentation, and clarity. <code>sftraj</code> would fit in the special category “geospatial data”. Becoming the first official rOpenSci tracking package (none of the 58 existing tracking packages are currently on rOpenSci) would give the package an extra exposure, and guarantee its overall usefulness and usability.</li>
-<li><strong>Submission of a companion manuscript to the R Journal</strong> [month 3–4]: Finally, as the quality of <code>sftraj</code> increases with the previous steps, we will work on a manuscript aimed at developers to provide the rationale behind development decisions for the package, and detail its implementation. In practice, this manuscript will provide package developers the necessary information for other packages to be able to rely on classes from <code>sftraj</code>.</li>
+<li><strong>Submission to CRAN</strong> [month 1]: <code>sftrack</code> is currently installable from the GitHub repository, and passes all CRAN checks. However, publication on CRAN will allow for easy installation on any computer, as well as enabling the dependency system of R packages, which are both mandatory for broad adoption. In this first stage, we will thus submit the package to CRAN.</li>
+<li><strong>Data class converters</strong> [month 1–2]: We will provide converters to classes from the main tracking packages, such as <code>adehabitatLT::ltraj</code> and <code>trackeR::trackeRdata</code>, integrated into <code>as_sftrack</code> through method dispatch. We will develop bidirectional conversion, and work towards lossless conversion both ways. Depending on the specific requirements of other classes, this will require adjusting the classes already developed in <code>sftrack</code>.</li>
+<li><strong>Integration of <code>strack</code></strong> [month 2–4]: In parallel, we will work with developers willing to fully integrate the solution offered by <code>sftrack</code> at the core of their data flow. This step may require substantial rewriting of other packages — while we will not take the lead on this task, we will provide specific guidance and feedback, and potentially adjust <code>sftrack</code> to match the needs of each package involved at this stage.</li>
+<li><strong>Submission to rOpenSci</strong> [month 5–6]: In the last two months, we will go one step further and actually prepare <code>sftrack</code> for rOpenSci, which will coincide with the stable API of version 1.0.0. rOpenSci emphasizes (and basically enforces) a package’s quality, fit, documentation, and clarity. <code>sftrack</code> would fit in the special category “geospatial data”. Becoming the first official rOpenSci tracking package (none of the 58 existing tracking packages are currently on rOpenSci) would give the package extra visibility, and guarantee its overall usefulness and usability.</li>
 </ul>
 </div>
 <div id="other-aspects" class="section level2">
@@ -336,8 +337,7 @@ Covering non-technical activities like on-going publicity, paper preparation, di
  - [ ] UseR!
  - [ ] ISC meetings
 -->
-<p>While the work on <code>sftraj</code> will happen completely in the open, we will keep communicating on our progress, directly on Twitter as well as with more detailed blog posts on <a href="https://mablab.org/" class="uri">https://mablab.org/</a>. We will watch for feedback, notably through the GitHub repository, which will remain constantly open.</p>
-<p>In parallel, we will use scientific conferences (which we already planned to attend, using other funding) to introduce <code>sftraj</code> and present our work, such as useR! 2020 (which will be held in St. Louis, Missouri in July 2020), the International Statistical Ecology Conference (ISEC, which will be held in Sydney Australia, in June 2020), or Moving2Gather (which will be held in Rennes, France in March 2020).</p>
+<p>While the work on <code>sftrack</code> will happen completely in the open, we will keep communicating our progress, directly on Twitter as well as with more detailed blog posts on <a href="https://mablab.org/" class="uri">https://mablab.org/</a>. We will watch for feedback, notably through the GitHub repository, which will collect use cases, bug issues and suggestions for enhancements. We have already successfully presented our work on <code>sftrack</code> at the 2020 Moving2Gather conference (held in Rennes, France) in March 2020), and will certainly consider other venues once the situation with COVID-19 allows us to normally travel.</p>
 </div>
 </div>
 <div id="requirements" class="section level1">
@@ -350,8 +350,8 @@ An idea of what is required to make the project actually happen
 <!--
 Who needs to be involved, what's the proposed structure, what will it take to get their involvement?
 -->
-<p>This is the same core project team than for the first stage of the work, which will lead the work for all deliverables. This stage will likely be less collaborative than the first stage, as it focuses on writing documentation and packaging the code, although all contributors will be welcome.</p>
-<p>In particular, we request $10,000 in salary for 1.79 months (over the course of the project) of Matt Boone, Data Scientist at the University of Florida. Matt has a solid experience in R which complements that of other team members, and will be the main developer and contributor to the codebase. Having Matt fully dedicated guarantees successful completion of the project.</p>
+<p>This is the same core project team than for the first stage of the work, which will lead the work for all deliverables. This stage will be highly collaborative, as we will work with other tracking package developers (including some already in the core team). We have already established working connections with several of them, notably through our efforts in the movement community over the last two years.</p>
+<p>In particular, we request $10,000 in salary for Matt Boone (1.79 months over the course of the project), Data Scientist at the University of Florida. Matt has a solid experience in R which complements that of other team members, and is the lead coder of <code>sftrack</code>. Having Matt fully dedicated guarantees successful completion of the project.</p>
 </div>
 <div id="processes" class="section level2">
 <h2>Processes</h2>
@@ -369,7 +369,7 @@ Will cloud computing be used - if yes are there are necessary components that wi
 
 Are there tools or tech that don't exist that will be produced to facilitate the project?
 -->
-<p>No technical constraint is foreseen. All team members are already equipped with enough computer power to work on the project. The development platform (GitHub) is already set up and public, and will remain open to the entire Movement community.</p>
+<p>No technical constraint is foreseen. All team members are already equipped with enough computer power to work on the project. The development platform (GitHub) is already set up and public, and will remain open to the entire movement community.</p>
 </div>
 <div id="funding" class="section level2">
 <h2>Funding</h2>
@@ -451,10 +451,8 @@ What sort of things could come up that can delay or break the project?
 <div id="references" class="section level1">
 <h1>References</h1>
 <ul>
-<li><p>Bucklin, D., &amp; Basille, M. (2018). rpostgis: linking R with a PostGIS spatial database. The R Journal, 10(1), 251–268. <a href="https://doi.org/c7fc" class="uri">https://doi.org/c7fc</a></p></li>
-<li><p>Gudmundsson, J., Laube, P., &amp; Wolle, T. (2011). Computational Movement Analysis. <em>In</em> Kresse W, &amp; Danko D. M. (Eds.), Springer Handbook of Geographic Information (pp. 423–438), Springer-Verlag Berlin Heidelberg. <a href="https://dx.doi.org/10.1007/978-3-540-72680-7_22" class="uri">https://dx.doi.org/10.1007/978-3-540-72680-7_22</a></p></li>
-<li><p>Joo, R., Boone, M. E., Clay, T. A., Patrick, S. C., Clusella-Trullas, S., &amp; Basille, M. (2019). Navigating through the R packages for movement. Journal of Animal Ecology (early view). <a href="https://doi.org/10.1111/1365-2656.13116" class="uri">https://doi.org/10.1111/1365-2656.13116</a><br />
-Pre-print available at: <a href="https://arxiv.org/abs/1901.05935" class="uri">https://arxiv.org/abs/1901.05935</a></p></li>
+<li><p>Bucklin, D. &amp; Basille, M. (2018). rpostgis: linking R with a PostGIS spatial database. The R Journal, 10:251–268. <a href="https://doi.org/c7fc" class="uri">https://doi.org/c7fc</a></p></li>
+<li><p>Joo, R., Boone, M. E., Clay, T. A., Patrick, S. C., Clusella-Trullas, S. &amp; Basille, M. (2020). Navigating through the R packages for movement. Journal of Animal Ecology, 89:248–267. <a href="http://dx.doi.org/dcnf" class="uri">http://dx.doi.org/dcnf</a> Pre-print available at: <a href="https://arxiv.org/abs/1901.05935" class="uri">https://arxiv.org/abs/1901.05935</a></p></li>
 </ul>
 </div>
 

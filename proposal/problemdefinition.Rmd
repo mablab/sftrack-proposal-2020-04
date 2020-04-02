@@ -41,12 +41,12 @@ full-featured, and is ready for broad testing. This stepping stone in
 the development of `sftrack` already contributes solid foundations for
 the tracking ecosystem in R. There is a need now to deepen the
 connections with other packages, and work together with package
-developers for broad adoption of `sftrack`. We thus propose a two-step
-extension of the `sftrack` project, aiming at:
+developers for broad adoption of `sftrack`. We thus propose an
+extension of the `sftrack` project aiming at:
 
 1. Working with developers of tracking packages to ensure linkage to
    `sftrack`, and enhance interoperability within the tracking
    ecosystem in R.
-2. Establishing `sftrack` formally in the R ecosystem, with a
-   submission to CRAN (https://cran.r-project.org/) and to rOpenSci
+2. Establishing `sftrack` formally in the R ecosystem, through
+   submissions to CRAN (https://cran.r-project.org/) and to rOpenSci
    (https://ropensci.org/).

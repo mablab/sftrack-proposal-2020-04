@@ -1,0 +1,75 @@
+# Requirements
+<!-- 
+An idea of what is required to make the project actually happen
+-->
+
+## People
+<!--
+Who needs to be involved, what's the proposed structure, what will it take to get their involvement?
+-->
+
+This is the same core project team than for the first stage of the
+work, which will lead the work for all deliverables. This stage will
+be highly collaborative, as we will work with other tracking package
+developers (including some already in the core team). We have already
+established working connections with several of them, notably through
+our efforts in the movement community over the last two years.
+
+In particular, we request \$10,000 in salary for Matt Boone (1.79
+months over the course of the project), Data Scientist at the
+University of Florida. Matt has a solid experience in R which
+complements that of other team members, and is the lead coder of
+`sftrack`. Having Matt fully dedicated guarantees successful
+completion of the project.
+
+
+## Processes
+<!-- 
+What processes need to be put in place e.g. codes of conduct, regular ISC meetings, handover to the community at large?
+-->
+
+We will follow the same principles of openness than before, relying on
+a community-based code of conduct that aims to be inclusive, and a
+work that will happen entirely publicly, using the GitHub repository.
+
+
+## Tools & Tech
+<!--
+What is going to be needed to deliver this project? 
+
+Will cloud computing be used - if yes are there are necessary components that will be deciding factors between providers?
+
+Are there tools or tech that don't exist that will be produced to facilitate the project?
+-->
+
+No technical constraint is foreseen. All team members are already
+equipped with enough computer power to work on the project.  The
+development platform (GitHub) is already set up and public, and will
+remain open to the entire movement community.
+
+
+## Funding
+<!-- 
+[TO DO] THE GUIDANCE IS PRETTY UNCLEAR, ESP IN LIGHT OF GABOR'S PROPOSAL VS AWARD SIZE
+
+-->
+
+We request a total of \$10,000 to support 1.79 months of Matt Boone,
+Data Scientist (Biological Scientist II) in the MabLab at the
+University of Florida.
+
+* Salary: \$7,369
+* Fringe rate (35.70 %): \$2,631
+* **Total award = \$10,000**
+
+
+## Summary
+<!--
+A summary of the requirements that contextualises the costs
+-->
+
+Salary to support a Data Scientist is requested to have one person
+committed to the project, who will dedicate set chunks of time to the
+work. This seems required to ensure project completion in the proposed
+timeline. Almost 8 weeks of funded work over the course of the project
+is a reasonable amount of time, which matches proposed deliverables.
